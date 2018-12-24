@@ -9,12 +9,11 @@ public class LinkedListTimers extends AbstractTimer {
         for (int i = 0; i < 1000000; i++) {
             age.add(i);
         }
-        System.out.println(age);
         long endTime = getTime();
         System.out.println("Time of adding: " + (endTime - startTime));
 
         long startTime2 = getTime();
-        if (age.contains(1)) {
+        if (age.contains(9898)) {
             long endTime2 = getTime();
             System.out.println("Time of search:" + (endTime2 - startTime2));
         }
