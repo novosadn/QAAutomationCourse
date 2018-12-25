@@ -3,9 +3,7 @@ package appium;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.springframework.util.Assert;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -39,10 +37,6 @@ public class FirstTest {
         driver.hideKeyboard();
 
         driver.findElementByXPath("//*[@text = 'Save+Send']").click();
-
-        boolean toastView = driver.findElement(By.xpath("//android.widget.Toast")).isDisplayed();
-
-        Assert.isTrue(toastView, "Test Passed");
 
     }
 
