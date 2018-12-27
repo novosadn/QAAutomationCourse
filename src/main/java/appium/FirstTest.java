@@ -28,8 +28,9 @@ public class FirstTest {
 
     }
     private static void test(AndroidDriver driver) {
+
         driver.findElementByXPath("//*[@text = '1Acc']").click();
-        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"email_trust_all_certificates\").instance(0))").click();
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"email_trust_all_certificates\").instance(0))");
 
         AndroidElement element = (AndroidElement) driver.findElementByXPath("//*[@text = 'email_exchange_username']/following-sibling::android.widget.EditText");
         element.clear();
@@ -37,6 +38,7 @@ public class FirstTest {
         driver.hideKeyboard();
 
         driver.findElementByXPath("//*[@text = 'Save+Send']").click();
+
 
     }
 
